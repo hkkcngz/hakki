@@ -4,10 +4,6 @@ header.navbar {
     left: 0;
     z-index: 115;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     width: 100%;
 
     background: #385e97;
@@ -76,4 +72,93 @@ header.navbar {
         }
     }
     
+}
+
+
+
+/* settings-icon */
+.settings-icon {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    z-index: 121;
+    color: #4a89dc;
+    cursor: pointer;
+    text-align: center;
+    svg.icon{
+        width: 30px;
+        height: 50px;
+    }
+}
+
+.settings-icon:hover,
+.burger:hover {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* header.navbar */
+.burger {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    z-index: 121;
+    cursor: pointer;
+}
+
+.x,
+.y,
+.z {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 15px;
+    right: 12.5px;
+    background: #4a89dc;
+    border-radius: 2px;
+    transition: all 200ms ease-out;
+}
+
+.x,
+.y,
+.z {
+    height: 3px;
+    width: 26px;
+}
+
+.y {
+    top: 18px;
+}
+
+.z {
+    top: 37px;
+}
+
+.collapse {
+    top: 20px;
+    background: #4a89dc;
+    transition: all 70ms ease-out;
+}
+
+
+.rotate30 {
+    transform: rotate(30deg);
+    transition: all 50ms ease-out;
+}
+
+.rotate150 {
+    transform: rotate(150deg);
+    transition: all 50ms ease-out;
+}
+
+.rotate45 {
+    transform: rotate(45deg);
+    transition: all 100ms ease-out;
+}
+
+.rotate135 {
+    transform: rotate(135deg);
+    transition: all 100ms ease-out;
 }
