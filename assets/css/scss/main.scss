@@ -1,20 +1,13 @@
 // hakki template
 
-// Reset - Fonts
-@import 'base/reset';
+// BASE [reset, root, screen, typography]
+@import 'base/index';
 
-// Base
-@import 'base/root';
-@import 'base/screen';
+// My Tools [dropping, tabs, helpers]
+@import 'mytools/index';
 
-// My Tools
-@import 'mytools/dropping'; // Dropdown
-@import 'mytools/tabs'; // tabs
-
-
-
-// Components
-@import 'comps/header';
+// Components [header]
+@import 'comps/index';
 
 // Custom
 @import 'custom';

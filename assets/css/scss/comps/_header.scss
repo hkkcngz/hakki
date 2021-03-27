@@ -1,4 +1,4 @@
-header {
+header.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,19 +8,12 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 15px;
-    // height: 50px;
     width: 100%;
 
     background: #385e97;
     color: #b7b7b7;
 
     box-shadow: 0 0 45px 0px rgba(0, 0, 0, 0.1);
-}
-
-.navbar .logo {
-    width: auto;
-    height: 27px;
 }
 
 .navbar a {
@@ -34,16 +27,21 @@ header {
 
 
 
-
+.logo {
+    display: flex;
+    .theme-picker {
+        width: 50px;
+        height: 50px;
+        margin-right: 1em;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
 .hc-logo {
     position: relative;
-    float: left;
-    top: 0;
-    margin: 0;
-    height: 100%;
-    width: 150px;
-    max-height: 50px;
     a:visited,
     a:link,
     a:active,
@@ -52,40 +50,30 @@ header {
         text-decoration: none;
         font-weight: bold;
     }
+
+
+    .hc-title{
+        display: block;
+        height: 50px;
+        h1 {
+            color: #fff;
+            letter-spacing: -1px;
+            font-family: var(--logo-font);
+            font-size: 1.5em;
+            font-weight: normal;
+            line-height: 1.3em;
+            margin: 0;
+        }
+        span {
+            color: var(--legendgreen, #444);
+        }
+        .hc-desc {
+            position: absolute;
+            top: 30px;
+            font-size: 0.8em;
+            padding-left: 2px;
+            width: -webkit-fill-available;
+        }
+    }
+    
 }
-
-.hc-dolunay {
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    width: 45px;
-    height: 45px;
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.hc-title{
-
-    h1 {
-        color: #fff;
-        letter-spacing: -1px;
-        font-family: var(--logo-font);
-        font-size: 1.5em;
-        font-weight: normal;
-        line-height: 1em;
-        margin: 0;
-    }
-    span {
-        color: var(--legendgreen, #444);
-    }
-    .hc-desc {
-        position: absolute;
-        top: 21px;
-        font-size: 0.8em;
-        padding-left: 2px;
-        width: -webkit-fill-available;
-    }
-}
-

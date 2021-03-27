@@ -1,0 +1,13 @@
+.wrapper {
+    width: 100%;
+    max-width: var(--maxwidthlg, 1140px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+svg.icon {
+    height: inherit;
+    width: inherit;
+}
