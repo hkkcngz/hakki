@@ -22,13 +22,18 @@ body {
 
 .screen{
   position: relative;
-  max-width: var(--maxwidthlg,1140px);
   margin: 0 auto;
-  padding: 50px 0;
 }
 
 main{
   transition: transform 0.5s;
   z-index: 1;
   min-height: 100vh;
+}
+
+.landing {
+  position: relative;
+  background: #385e97;
+  height: 100vh;
+  box-shadow: 0 0 45px 0px rgba(0, 0, 0, 0.1);
 }

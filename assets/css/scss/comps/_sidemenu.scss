@@ -143,15 +143,17 @@ form#searchform {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin-top: 7px;
 }
 
 .arama {
-    padding: 8px;
-    border-radius: 10px;
-    border: 3px solid #4a89dc;
-    background: transparent;
-    color: azure;
-    width: calc(100% - 50px);
+    padding: 8px !important;
+    border-radius: 10px !important;
+    border: 3px solid #4a89dc !important;
+    background: transparent !important;
+    color: azure !important;
+    width: calc(100% - 50px) !important;
+    height: unset !important;
     max-width: 100%;
 
     &::placeholder {
@@ -170,7 +172,7 @@ form#searchform {
     align-items: center;
     color: #4a89dc;
     cursor: pointer;
-    height: 50px;
+    height: 32px;
     width: 50px;
 
     &:hover {

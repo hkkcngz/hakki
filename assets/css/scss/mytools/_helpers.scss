@@ -1,10 +1,14 @@
 .wrapper {
     width: 100%;
-    max-width: var(--maxwidthlg, 1140px);
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     padding: 0 1em;
+}
+
+.boxed{
+    max-width: var(--maxwidthlg, 1140px);
+    margin: 0 auto;
 }
 
 svg.icon {

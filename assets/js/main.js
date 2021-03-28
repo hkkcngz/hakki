@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    $(".pageloader").fadeOut(2600);
+    $(".pageloader").show().fadeOut(2600);
 
 	var navTrigger = document.getElementsByClassName('burger')[0],
 	overlay = document.getElementsByClassName('overlay')[0],
