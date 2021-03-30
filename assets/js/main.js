@@ -2,6 +2,24 @@
 
 $(document).ready(function () {
 
+	// Dark Mode
+		let lamba = document.querySelector('.top');
+		// press the button to toggle the .dark-mode class
+		lamba.addEventListener('click', () => {
+			document.documentElement.classList.toggle('dark-mode');
+		});
+	// Dark Mode
+
+	// tabela düştü
+	let tabela = document.querySelector('.yakinda'),
+		civi = document.getElementById('civi');
+
+		civi.addEventListener('click', () => {
+			tabela.classList.toggle('dustu');
+		});
+
+	// tabela düşer
+
     $(".pageloader").show().fadeOut(2600);
 
 	var navTrigger = document.getElementsByClassName('burger')[0],
@@ -27,6 +45,11 @@ $(document).ready(function () {
 			$('.x').toggleClass('rotate45'); 
 			$('.z').toggleClass('rotate135');  
 		}, 120);
+
+
+		// Mysidemenu
+		$('.sidemenu').toggleClass('opened');
+		// Mysidemenu
 	}
 
 	function OffNavigation () {
@@ -44,6 +67,7 @@ $(document).ready(function () {
 			$('.z').toggleClass('rotate135');  
 		}, 120);
 	}
+
 
 
 });

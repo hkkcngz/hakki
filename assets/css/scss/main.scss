@@ -1,13 +1,34 @@
 // hakki template
 
-// BASE [reset, root, screen, typography]
-@import 'base/index';
+// BASE
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/mixins';
 
-// My Tools [dropping, tabs, helpers]
-@import 'mytools/index';
+@import 'base/variables';
+@import 'base/themes';
+@import 'base/screen';
+@import 'base/typography';
 
-// Components [header]
-@import 'comps/index';
+
+// My Tools
+@import 'mytools/dropping'; // Dropdown
+@import 'mytools/tabs'; // tabs
+@import 'mytools/foreverlist'; // dropdown ul li
+@import 'mytools/helpers'; // tabs
+
+
+// Components
+@import 'comps/header';
+@import 'comps/sidemenu';
+@import 'comps/myside';
+@import 'comps/work-desk';
+@import 'comps/documentation';
+@import 'comps/yakinda';
+
+
+// Plugins
+@import 'plugins/zuckjs/index';
 
 // Custom
 @import 'custom';

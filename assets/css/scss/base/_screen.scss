@@ -8,6 +8,7 @@ html {
   font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: color 300ms, background-color 300ms;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   color: #4b5563;
-  background: #31558A;
+  background: var(--bgcolor, #31558A);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,7 +34,8 @@ main{
 
 .landing {
   position: relative;
-  background: #385e97;
+  background: var(--navcolor, #385e97);
   height: 100vh;
-  box-shadow: 0 0 45px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 45px 0px rgba(var(--section, #000), 0.1);
+  overflow: hidden;
 }

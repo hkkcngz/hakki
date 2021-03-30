@@ -1,0 +1,14 @@
+// Dark Mode
+html.dark-mode,
+html[theme='dark-mode'] {
+    filter: invert(1) hue-rotate(180deg);
+    --navcolor: #e0e0e0;
+    --bgcolor: #e2e2e2;
+    --section: #eee;
+    
+    --lamblights: #584308;
+    --tablecolor: #eee;
+    img{
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
