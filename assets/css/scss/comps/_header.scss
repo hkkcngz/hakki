@@ -14,7 +14,9 @@
 }
 
 .hc-logo {
-    position: relative;
+    position: absolute;
+    top: 1em;
+    left: 1em;
 
     a:visited,
     a:link,
@@ -27,6 +29,7 @@
 
 
     .hc-title {
+        position: relative;
         display: block;
         height: 50px;
 

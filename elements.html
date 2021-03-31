@@ -47,27 +47,22 @@
       <div class="yakinda">
         <civi id="civi"></civi>
         <ip></ip>
-        <kutu> <span>Hoşgeldiniz!</span> </kutu>
+        <kutu> <span class="trn">Welcome!</span> </kutu>
       </div>
 
-      <div class="boxed">
-        <div class="logo">
-          <div class="theme-picker">
-            <svg class="icon">
-              <use xlink:href="#icon-logo" />
-            </svg>
-          </div>
-          <div class="hc-logo">
-            <a class="hc-title" href="https://hakkicengiz.com" title="kodlarla dövüşen çocuk">
-              <h1>hakkı<span>cengiz</span></h1>
-              <div class="hc-desc">
-                <span>web</span> developer /&gt;
-              </div>
-            </a>
-          </div>
-        </div>
+      <div class="translator">
+        <span id="translator-en">EN</span>
+        <span id="translator-tr">TR</span>
       </div>
 
+      <div class="hc-logo">
+        <a class="hc-title" href="https://hakkicengiz.com" title="kodlarla dövüşen çocuk">
+          <h1>hakkı<span>cengiz</span></h1>
+          <div class="hc-desc">
+            <span>web</span> developer /&gt;
+          </div>
+        </a>
+      </div>
 
       <div class="work-desk boxed">
         <div class="boy">
@@ -1035,11 +1030,14 @@
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
+  
+  <script async src="assets/js/plugins/translatejs/jquery.translate.js"></script>
+  <script async src="assets/js/plugins/translatejs/dictionary.js"></script>
 
   <script src="assets/js/plugins/zuckjs/zuck.min.js"></script>
   <script src="assets/js/plugins/zuckjs/zuck.js"></script>
 
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

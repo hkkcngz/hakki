@@ -69,5 +69,16 @@ $(document).ready(function () {
 	}
 
 
-
+	// Bu Yazı Kaç Dakikada Okunur?
+	var readingTimeElement = document.getElementById('reading-time');
+	if(readingTimeElement) {
+		var txt = $(".post-full-content")[0].textContent,
+		wordCount = txt.replace( /[^\w ]/g, "" ).split( /\s+/ ).length;
+		var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+		var readingTimeAsString = readingTimeInMinutes + " dakika";
+		
+		$(readingTimeElement).html(readingTimeAsString);
+	}
+	// Bu Yazı Kaç Dakikada Okunur?
+    
 });
