@@ -3,10 +3,22 @@ var dict = {
       tr: "Hoşgeldiniz!",
       en: "Welcome!"
     },
-    "Download plugin": {
-       pt: "Descarregar plugin",
-       en: "Download plugin"
-    }
+    "Literature": {
+       tr: "Edebiyat",
+       en: "Literature"
+    },
+    "Music": {
+      tr: "Müzik",
+      en: "Music"
+   },
+   "Games": {
+      tr: "Oyunlar",
+      en: "Games"
+    },
+    "Software": {
+      tr: "Yazılım",
+      en: "Software"
+    },
 }
 
 var translator = $('body').translate({lang: "en", t: dict}); //use English

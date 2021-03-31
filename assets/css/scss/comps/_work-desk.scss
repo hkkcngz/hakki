@@ -25,6 +25,7 @@
     .boy {
         left: 50%;
         bottom: 10px;
+
         //animation: 8s sagsol ease infinite;
         //animation-delay: 5s;
         .head {
@@ -35,7 +36,7 @@
             border-radius: 50%;
             background: #eee;
         }
-    
+
         .head .eyes {
             top: 58px;
             left: 30px;
@@ -47,7 +48,7 @@
             animation: 8s eyes ease 2;
             animation-delay: 10s;
         }
-    
+
         .body {
             bottom: -20px;
             left: 52.5%;
@@ -56,6 +57,7 @@
             border-radius: 50%;
             background: #eee;
         }
+
         .headphones {
             top: -10px;
             left: 50%;
@@ -64,7 +66,7 @@
             border-radius: 50%;
             border-top: 10px solid #444;
         }
-    
+
         .headphones:before,
         .headphones:after {
             width: 20px;
@@ -72,13 +74,13 @@
             top: 20px;
             background: #ddd;
         }
-    
+
         .headphones:before {
             left: -8px;
             border-radius: 80px 0 0 80px;
             border-right: 3px solid #444;
         }
-    
+
         .headphones:after {
             right: -7px;
             border-radius: 0 80px 80px 0;
@@ -259,20 +261,24 @@
         left: 50%;
         transform: rotateY(0deg);
     }
+
     25% {
         left: 75%;
         transform: rotateY(90deg);
     }
+
     50% {
         left: 50%;
         transform: rotateY(180deg);
     }
+
     75% {
         left: 25%;
         transform: rotateY(270deg);
     }
+
     100% {
-        left:50%;
+        left: 50%;
         transform: rotateY(360deg);
     }
 }
@@ -286,12 +292,14 @@
     height: 30vh;
     box-shadow: 0 0 45px 0px rgba(var(--section, #000), 0.1);
     overflow: hidden;
+
     .work-desk {
-        .table{
+        .table {
             bottom: unset;
             top: -15px;
-            &:before, 
-            &:after{
+
+            &:before,
+            &:after {
                 height: 50vh;
             }
         }
@@ -306,14 +314,15 @@
     left: 50%;
     bottom: 0;
     border-radius: 20px;
-    box-shadow: -10px 15px 7px rgba(var(--section, #000),0.2);
+    box-shadow: -10px 15px 7px rgba(var(--section, #000), 0.2);
     transform: scale3d(1, 1, 1) rotateX(43deg) rotateZ(0deg) translate(-50%, -50%) skew(14deg, 0deg) !important;
 
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    span{
+
+    span {
         font-size: 30px;
         font-weight: bold;
         font-family: 'Poppins', sans-serif;
@@ -321,5 +330,54 @@
         background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+}
+
+.trash {
+    bottom: 10px;
+    left: 20px;
+    width: 100px;
+    height: 8px;
+    background: #444;
+
+    &:after {
+        top: 8px;
+        left: 3px;
+        width: 94px;
+        height: 25px;
+        border-radius: 0 0 50px 50px;
+        background: #555;
+    }
+
+    .paper {
+        z-index: -1;
+        width: 25px;
+        height: 50px;
+        border: 2px solid #555;
+        background: #ddd;
+
+        &.p1 {
+            top: -15px;
+            left: 10px;
+            transform: rotate(-20deg);
+        }
+
+        &.p2 {
+            top: -12px;
+            left: 30px;
+            transform: rotate(-40deg);
+        }
+
+        &.p3 {
+            top: -15px;
+            left: 60px;
+            transform: rotate(10deg);
+        }
+
+        &.p4 {
+            top: -12px;
+            left: 30px;
+            transform: rotate(65deg);
+        }
     }
 }

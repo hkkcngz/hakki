@@ -22,17 +22,16 @@ $(document).ready(function () {
 
     $(".pageloader").show().fadeOut(2600);
 
+	// Burger
 	var navTrigger = document.getElementsByClassName('burger')[0],
 	overlay = document.getElementsByClassName('overlay')[0],
 	body = document.getElementsByTagName('body')[0];
-	//main = document.getElementsByTagName('main')[0];
 
 	navTrigger.addEventListener('click', toggleNavigation);
 	overlay.addEventListener('click', OffNavigation);
 
 	function toggleNavigation(e) {
 		body.classList.toggle('nav-open');
-		//main.classList.toggle('boxShadow');
 
 		$('.burger').toggleClass('open');	
 		$('.x, .y, .z').toggleClass('collapse');
@@ -48,7 +47,7 @@ $(document).ready(function () {
 
 
 		// Mysidemenu
-		$('.sidemenu').toggleClass('opened');
+		$('.rightsidemenu').toggleClass('opened');
 		// Mysidemenu
 	}
 
@@ -66,6 +65,36 @@ $(document).ready(function () {
 			$('.x').toggleClass('rotate45'); 
 			$('.z').toggleClass('rotate135');  
 		}, 120);
+
+		// Mysidemenu
+		$('.rightsidemenu').toggleClass('opened');
+		// Mysidemenu
+	}
+
+	// BurgerSol
+	var navTriggerSol = document.getElementsByClassName('burgersol')[0];
+	navTriggerSol.addEventListener('click', toggleNavigationSol);
+
+	function toggleNavigationSol(e) {
+		body.classList.toggle('nav-open');
+		//main.classList.toggle('boxShadow');
+
+		$('.burgersol').toggleClass('open');	
+		$('.a, .b, .c').toggleClass('collapse');
+		setTimeout(function(){ 
+			$('.b').toggle(); 
+			$('.a').toggleClass('rotate30'); 
+			$('.c').toggleClass('rotate150'); 
+		}, 70);
+		setTimeout(function(){
+			$('.a').toggleClass('rotate45'); 
+			$('.c').toggleClass('rotate135');  
+		}, 120);
+
+
+		// Mysidemenu
+		$('.leftsidemenu').toggleClass('opened');
+		// Mysidemenu
 	}
 
 

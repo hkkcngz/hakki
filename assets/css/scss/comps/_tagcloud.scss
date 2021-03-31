@@ -1,0 +1,22 @@
+/*etiketler*/
+.tagcloud {
+    color: #999;
+    margin: 10px auto;
+    line-height: 1.2;
+    font-size: 14px;
+    a {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        color: #666;
+        text-decoration: none;
+        padding: 3px 10px;
+        background-color: #ddd;
+        margin: 4px;
+        cursor: pointer;
+        &:hover {
+            color: #fff;
+            background-color: #0091ea
+        }
+    }
+}
