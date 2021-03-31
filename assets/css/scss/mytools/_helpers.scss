@@ -16,6 +16,12 @@ svg.icon {
     width: inherit;
 }
 
+.hidden {
+    display: none
+}
+.show {
+    display: block
+}
 
 /* scroll */
 .bottom-scroll {
@@ -158,9 +164,25 @@ svg.icon {
 
 }
 
-
-
-
 .boxShadow {
     box-shadow: 0 0 50px #000;
+}
+
+
+.hc-author_photo {
+    position: relative;
+    z-index: 9;
+    img {
+        border: 1px solid #666;
+        transition: transform 0.15s linear;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+        padding: 5px 5px 5px 5px;
+        transform: rotate(+2deg);
+        &:hover {
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            transform: rotate(-1deg);
+        }
+    }
 }

@@ -12,10 +12,10 @@
 
 
 // My Tools
-@import 'mytools/dropping'; // Dropdown
-@import 'mytools/tabs'; // tabs
-@import 'mytools/foreverlist'; // dropdown ul li
-@import 'mytools/helpers'; // tabs
+@import 'mytools/dropping';     // Dropdown
+@import 'mytools/tabs';         // tabs
+@import 'mytools/foreverlist';  // dropdown ul li
+@import 'mytools/helpers';      // tabs
 
 
 // Components
@@ -30,6 +30,7 @@
 // Plugins
 @import 'plugins/translate';
 @import 'plugins/zuckjs/index';
+@import 'plugins/music';
 
 // Custom
 @import 'custom';

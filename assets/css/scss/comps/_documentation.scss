@@ -46,6 +46,9 @@
     .main-page-content {
       padding: 2em 1em;
       max-width: 100%;
+      @include mobile {
+        padding: 0;
+      }
     }
   }
   

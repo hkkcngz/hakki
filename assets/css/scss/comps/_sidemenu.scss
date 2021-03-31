@@ -6,7 +6,7 @@
     min-height: 100vh;
     width: 300px;
     max-width: 100%;
-    color: #fff;
+    color: #4a89dc;
     background-color: #537895;
     background-image: linear-gradient(315deg, var(--sidegradient01, #537895) 0%, var(--sidegradient02, #09203f) 74%);
     border-left: 5px solid #305386;
@@ -199,13 +199,12 @@ form#searchform {
         border-color: #4a89dc;
     }
     .settings-content {
-        height: calc(100% - 100px);
+        height: calc(100% - 200px);
         overflow: auto;
         border-top: 3px solid #4a89dc;
         border-bottom: 3px solid #4a89dc;
         border-right: 3px solid #4a89dc;
         padding-left: 10px;
-        margin-top: 49px;
     }
     img {
         width: 160px;
