@@ -4,6 +4,7 @@
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/mixins';
+@import 'base/grid';
 
 @import 'base/variables';
 @import 'base/themes';
@@ -26,6 +27,7 @@
 @import 'comps/yakinda';
 @import 'comps/kapim';
 @import 'comps/tagcloud';
+@import 'comps/postcard';
 
 // Plugins
 @import 'plugins/translate';
@@ -35,6 +37,7 @@
 // Pages
 @import 'pages/single';
 @import 'pages/single-header';
+@import 'pages/card'; 
 
 // Custom
 @import 'custom';

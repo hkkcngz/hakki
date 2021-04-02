@@ -168,6 +168,12 @@ svg.icon {
     box-shadow: 0 0 50px #000;
 }
 
+.circle_list img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 .hc-author_photo {
     position: relative;

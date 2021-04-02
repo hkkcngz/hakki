@@ -54,6 +54,11 @@ section {
     box-shadow: 0 10px 15px -3px rgba(var(--section, #000), 0.1),
         0 4px 6px -2px rgba(var(--section, #000), 0.05);
 
+    @include mobile{
+        border-radius:0;
+        margin-bottom: 0;
+    }
+
     .title {
         font-weight: 500;
         font-size: 1.25rem;
@@ -158,4 +163,8 @@ details {
             display: none;
         }
     }
+}
+
+button {
+    outline: none;
 }

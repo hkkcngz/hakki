@@ -1,4 +1,4 @@
-var Stories = document.querySelector('stories');
+var Stories = document.querySelector('#stories');
 if (Stories) {
   var timestamp = function () {
     var timeIndex = 0;
@@ -96,15 +96,15 @@ if (Stories) {
     localStorage: true,
     stories: [
       Zuck.buildTimelineItem(
-        "ramon",
-        "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/users/1.jpg",
-        "Ramon",
-        "https://ramon.codes",
+        "hakki",
+        "http://127.0.0.1:5500/images/me.jpg",
+        "Hakkı",
+        "https://hakki.app",
         timestamp(),
         [
-          ["ramon-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-          ["ramon-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-          ["ramon-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
+          ["hakki-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
+          ["hakki-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
+          ["hakki-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()]
         ]
       ),
       Zuck.buildTimelineItem(
