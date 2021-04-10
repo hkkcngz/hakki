@@ -35,6 +35,12 @@ $desktop-width: 1024px;
     }
 }
 
+@mixin minWidth($minWidth) {
+    @media only screen and (min-width: #{$minWidth}) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media (min-width: #{$desktop-width}) {
         @content;

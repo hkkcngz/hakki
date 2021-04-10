@@ -58,6 +58,9 @@ section {
         border-radius:0;
         margin-bottom: 0;
     }
+    &.np{
+        padding: 0;
+    }
 
     .title {
         font-weight: 500;
@@ -168,3 +171,42 @@ details {
 button {
     outline: none;
 }
+
+
+
+del {
+    --del-color: #ff92bf; 
+
+    --color: var(--del-color, red);
+    text-decoration: none;
+    padding: 0 .5em;
+    background-repeat: no-repeat;
+    background-image: 
+      linear-gradient(to left, rgba(255, 255, 255, .5), transparent),
+      linear-gradient(2deg, var(--color) 50%, transparent 50%),
+      linear-gradient(-.9deg, var(--color) 50%, transparent 50%),
+      linear-gradient(-60deg, var(--color) 50%, transparent 50%),
+      linear-gradient(120deg, var(--color) 50%, transparent 50%);
+    
+    background-size: 
+      30% 1.5px,
+      calc(100% - 20px) 10px, 
+      calc(100% - 20px) 10px,
+      10px 10px,
+      8px 8px; 
+    
+    background-position: 
+      100% calc(50% + 2px),
+      center center, 
+      center center, 
+      2px 50%, 
+      calc(100% - 3px) calc(50% + 1px);
+  }
+  
+  /* don't have much ideas for <ins> */
+  ins {
+      
+    --ins-color: #ddff92;
+    background: var(--ins-color, green);
+    text-decoration: none;
+  }

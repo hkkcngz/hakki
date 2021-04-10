@@ -13,10 +13,11 @@
 
 
 // My Tools
+@import 'mytools/helpers';
 @import 'mytools/dropping';     // Dropdown
 @import 'mytools/tabs';         // tabs
 @import 'mytools/foreverlist';  // dropdown ul li
-@import 'mytools/helpers';      // tabs
+@import 'mytools/cookie';
 
 
 // Components
@@ -28,16 +29,21 @@
 @import 'comps/kapim';
 @import 'comps/tagcloud';
 @import 'comps/postcard';
+@import 'comps/categories';
 
 // Plugins
 @import 'plugins/translate';
 @import 'plugins/zuckjs/index';
 @import 'plugins/music';
+@import 'plugins/prism';
+@import 'plugins/video-modal';
 
 // Pages
 @import 'pages/single';
 @import 'pages/single-header';
-@import 'pages/card'; 
+@import 'pages/single-view';
+@import 'pages/card';
+@import 'pages/posts';
 
 // Custom
 @import 'custom';

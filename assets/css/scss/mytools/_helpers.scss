@@ -76,8 +76,14 @@ svg.icon {
     color: #fff;
 }
 
-.single-content a {
-    text-decoration: underline;
+.single-content {
+    position: relative;
+    a {
+        text-decoration: underline;
+    }
+    &.p{
+        padding: 2em;
+    }
 }
 
 /* loader */

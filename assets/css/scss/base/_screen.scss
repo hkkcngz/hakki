@@ -2,13 +2,13 @@
 *:before,
 *:after {
   box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
 html {
   font-size: 16px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: color 300ms, background-color 300ms;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
   background: var(--bgcolor, #31558A);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: color 300ms, background-color 300ms;
 }
 
 .screen{
