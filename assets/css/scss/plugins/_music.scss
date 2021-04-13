@@ -132,17 +132,21 @@
     }
     
     .ui-slider .ui-slider-handle {
+        position: absolute;
+        bottom: -4px;
+        top: unset;
+        outline: none;
+        background: rgba(0,0,0,0.5);
+
         display: block;
         height: 14px;
         border-radius: 14px;
         width: 14px;
-        -webkit-transition: all ease-in-out .3s;
         transition: all ease-in-out .3s
     }
     
     .volume .ui-slider-range {
         background: #444;
-        -webkit-transition: all ease-in-out .3s;
         transition: all ease-in-out .3s
     }
     

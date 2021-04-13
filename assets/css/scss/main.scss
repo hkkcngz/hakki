@@ -30,6 +30,7 @@
 @import 'comps/tagcloud';
 @import 'comps/postcard';
 @import 'comps/categories';
+@import 'comps/comments';
 
 // Plugins
 @import 'plugins/translate';
@@ -41,7 +42,7 @@
 // Pages
 @import 'pages/single';
 @import 'pages/single-header';
-@import 'pages/single-view';
+@import 'pages/single-post-info';
 @import 'pages/card';
 @import 'pages/posts';
 

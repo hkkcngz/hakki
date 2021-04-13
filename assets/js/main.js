@@ -18,6 +18,14 @@ if (cookieBox) {
 	checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 }
 
+let sideMiddle =  document.getElementById('side-middle');
+if ( sideMiddle ) {
+	function scrollToBottom() {
+		sideMiddle.scrollTop = 9999999;
+	}
+}
+
+
 
 $(document).ready(function () {
 
@@ -89,7 +97,6 @@ $(document).ready(function () {
 		$('.sidemenu').toggleClass('opened');
 		// Mysidemenu
 	}
-
 
 	// Bu Yazı Kaç Dakikada Okunur?
 	var readingTimeElement = document.getElementById('reading-time');

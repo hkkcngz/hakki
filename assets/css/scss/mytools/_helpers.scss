@@ -7,8 +7,10 @@
 }
 
 .boxed{
-    max-width: var(--maxwidthlg, 1140px);
     margin: 0 auto;
+    @include minWidth('768px') {
+        max-width: var(--maxwidthlg, 1140px);
+    }
 }
 
 svg.icon {
@@ -21,6 +23,21 @@ svg.icon {
 }
 .show {
     display: block
+}
+
+.full-width{
+    width: 100%;
+}
+
+.align-right {
+    float: right;
+    max-width: 50%;
+    margin: 1em 0 1em 1em;
+}
+.align-left {
+    float: left;
+    max-width: 50%;
+    margin: 1em 1em 1em 0;
 }
 
 /* scroll */
@@ -174,7 +191,8 @@ svg.icon {
     box-shadow: 0 0 50px #000;
 }
 
-.circle_list img {
+.circle_list img,
+img.circle {
     height: 50px;
     width: 50px;
     object-fit: cover;

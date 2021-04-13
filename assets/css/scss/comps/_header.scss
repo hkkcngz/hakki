@@ -83,14 +83,14 @@
         top: 0;
         bottom: 15px;
         right: 12.5px;
-        background: #4a89dc;
+        background: var(--title-color, #4a89dc);
         border-radius: 2px;
         transition: all 200ms ease-out;
         height: 3px;
         width: 26px;
         &.collapse {
             top: 20px;
-            background: #4a89dc;
+            background: var(--title-color, #4a89dc);
             transition: all 70ms ease-out;
         }
         

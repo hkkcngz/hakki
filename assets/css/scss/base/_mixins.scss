@@ -40,6 +40,16 @@ $desktop-width: 1024px;
         @content;
     }
 }
+@mixin maxWidth($maxWidth) {
+    @media only screen and (max-width: #{$maxWidth}) {
+        @content;
+    }
+}
+@mixin betWidth($minWidth, $maxWidth) {
+    @media only screen and (min-width: #{$minWidth}) and (max-width: #{$maxWidth}) {
+        @content;
+    }
+}
 
 @mixin desktop {
     @media (min-width: #{$desktop-width}) {

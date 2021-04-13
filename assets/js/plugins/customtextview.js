@@ -116,6 +116,7 @@ if (Trigger) {
       return $('.dropdown').removeClass('expanded');
     });
   
+    /*
     $(window).scroll(function() {
       var height, scrollTop;
       if (!$('.dropdown').hasClass('expanded')) {
@@ -126,6 +127,7 @@ if (Trigger) {
         });
       }
     });
+    */
   
   }).call(this);
 
