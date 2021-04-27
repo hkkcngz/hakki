@@ -14,14 +14,13 @@
     background: #fff;
     &:hover {
         background: #eee;
-        border-top: #666 solid .25em;
     }
     a {
         display: block;
         padding: 2.374em 2.5em 2.5em 2.5em;
         overflow: hidden;
         &:hover {
-            padding: 2.187em 2.5em 2.5em 2.5em;
+            
             h2 {
                 color: #157EBF;
             }
@@ -80,9 +79,6 @@
     .loop-post {
         a {
             padding: 2.374em 1.5em 2.5em 1.5em;
-            &:hover {
-                padding: 2.187em 1.5em 2.5em 1.5em;
-            }
         }
         .postQuote {
             font-size: 100%;
