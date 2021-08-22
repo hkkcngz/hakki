@@ -1,3 +1,6 @@
+$color-1st: #ffea92;
+$color-2nd: #5bc995;
+
 .music-wrapper {
     position: relative;
     display: block;
@@ -19,24 +22,18 @@
     .trackDetails {
         text-align: center;
         margin: 4px auto;
-        width: 300px;
-        border: 1px solid #777;
+        width: 100%;
+        border: 1px solid $color-2nd;
         background: #fff;
         border-radius: 4px;
         padding: 6px
     }
-
-
-    .icons,
-    .splitTxt {
-        color: #000
-    }
     
     .artist,
-    .mp3-title {
-        color: #999;
+    .mp3-title,
+    .splitTxt {
+        color: darken($color-2nd, 20%);
         user-select: none;
-        left: 167px
     }
     
     .mp3-title {
@@ -49,19 +46,27 @@
     }
     
     .controls {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         cursor: pointer;
         height: 40px;
-        width: 120px;
-        margin: 0 auto;
+        margin: 5px auto;
         .fwd,
         .pause,
         .play,
-        .rew {
+        .rew,
+        .playlistIcon,
+        .volumeIcon {
             float: left;
             height: 40px;
             width: 40px;
             line-height: 40px;
-            text-align: center
+            text-align: center;
+            fill: $color-2nd;
+            cursor: pointer;
         }
     }
     
@@ -71,37 +76,14 @@
     .controls .play,
     .plIcon,
     .volumeIcon {
-        font-size: 26px
-    }
-    
-    .playlistIcon,
-    .volumeIcon {
-        position: absolute;
-        bottom: 10px;
-        cursor: pointer;
-        height: 40px;
-        width: 40px;
-    
-        color: #333;
-        background: #fff;
-        padding: 9px;
-        border-radius: 100%;
-        line-height: 1;
-    }
-    
-    .playlistIcon {
-        right: 10px;
-        font-size: 1.5em;
+        font-size: 26px;
     }
     
     .icon-plylst {
         font-size: 1.5em;
         z-index: 1001
     }
-    
-    .volumeIcon {
-        left: 10px;
-    }
+
     
     .controls .pause {
         display: none
@@ -136,7 +118,7 @@
         bottom: -4px;
         top: unset;
         outline: none;
-        background: rgba(0,0,0,0.5);
+        background: #007519;
 
         display: block;
         height: 14px;
@@ -151,7 +133,7 @@
     }
     
     .volume.ui-widget-content {
-        background: var(--main-color);
+        background: #5bc995;
     }
     
     .ui-slider-handle {
@@ -165,7 +147,7 @@
     
     .volume {
         display: none;
-        right: 14px;
+        left: 14px;
         position: absolute;
         top: 40px;
         height: 100px;
@@ -215,7 +197,7 @@
     }
     
     .ui-widget-content {
-        background: #ddd
+        background: #ceefcf
     }
 
 }

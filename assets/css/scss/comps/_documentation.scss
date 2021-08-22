@@ -1,9 +1,10 @@
 .main-page {
   margin: 0 auto;
   display: flex;
-
-  @include mobilelg {
+  padding: 1em 2em;
+  @include maxWidth(1025px) {
     flex-direction: column;
+    padding: 0;
   }
 
   .main-page-navigation {
@@ -15,7 +16,8 @@
       background: #ffffff;
       padding: 0.5em;
       margin-bottom: 2.5em;
-      border-radius: 0.75rem;
+      border-radius: 4px;
+      list-style: none;
     }
   }
 
@@ -25,8 +27,20 @@
     max-width: 100%;
 
     @include mobile {
-      padding: 0;
+      padding: 3.5em 0 0 0;
     }
+  }
+}
+
+@include betWidth(481px, 1025px) {
+  .main-page .main-page-navigation {
+    padding: 1em;
+  }
+}
+
+@include minWidth(1366px) {
+  .main-page .main-page-navigation {
+    max-width: 30%;
   }
 }
 
@@ -99,9 +113,9 @@
 }
 
 .to-reset {
-  background: #3b4ce2;
+  background: #5BC995;
 
   &:hover {
-    background: darken(#3b4ce2, 5%);
+    background: darken(#5BC995, 5%);
   }
 }

@@ -18,8 +18,17 @@ if (cookieBox) {
 	checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
 }
 
-let sideMiddle =  document.getElementById('side-middle');
-if ( sideMiddle ) {
+function closeCookiesBox () {
+	cookieBox.style.display = 'none';
+}
+
+function expandedTrigger () {
+	let item = document.getElementById('expandTrigger');
+	item.classList.toggle('expanded');
+}
+
+let sideMiddle = document.getElementById('side-middle');
+if (sideMiddle) {
 	function scrollToBottom() {
 		sideMiddle.scrollTop = 9999999;
 	}
@@ -27,7 +36,74 @@ if ( sideMiddle ) {
 
 
 
-$(document).ready(function () {
+
+/**
+ * getHeight - for elements with display:none
+ */
+var getHeight = function (el) {
+		var el_style = window.getComputedStyle(el),
+			el_display = el_style.display,
+			el_position = el_style.position,
+			el_visibility = el_style.visibility,
+			el_max_height = el_style.maxHeight.replace('px', '').replace('%', ''),
+
+			wanted_height = 0;
+
+
+		// if its not hidden we just return normal height
+		if (el_display !== 'none' && el_max_height !== '0') {
+			return el.offsetHeight;
+		}
+
+		// the element is hidden so:
+		// making the el block so we can meassure its height but still be hidden
+		el.style.position = 'absolute';
+		el.style.visibility = 'hidden';
+		el.style.display = 'block';
+
+		wanted_height = el.offsetHeight;
+
+		// reverting to the original values
+		el.style.display = el_display;
+		el.style.position = el_position;
+		el.style.visibility = el_visibility;
+
+		return wanted_height;
+	},
+
+
+	/**
+	 * toggleSlide mimics the jQuery version of slideDown and slideUp
+	 * all in one function comparing the max-heigth to 0
+	 */
+	toggleSlide = function (el) {
+		var el_max_height = 0;
+
+		if (el.getAttribute('data-max-height')) {
+			// we've already used this before, so everything is setup
+			if (el.style.maxHeight.replace('px', '').replace('%', '') === '0') {
+				el.style.maxHeight = el.getAttribute('data-max-height');
+			} else {
+				el.style.maxHeight = '0';
+			}
+		} else {
+			el_max_height = getHeight(el) + 'px';
+			el.style['transition'] = 'max-height 0.5s ease-in-out';
+			el.style.overflowY = 'hidden';
+			el.style.maxHeight = '0';
+			el.setAttribute('data-max-height', el_max_height);
+			el.style.display = 'block';
+
+			// we use setTimeout to modify maxHeight later than display (to we have the transition effect)
+			setTimeout(function () {
+				el.style.maxHeight = el_max_height;
+			}, 10);
+		}
+	};
+
+
+// On Load Page
+(function () {
 
 	// Dark Mode
 	let lamba = document.querySelector('.top');
@@ -37,234 +113,101 @@ $(document).ready(function () {
 	});
 	// Dark Mode
 
-	// tabela düştü
-	let tabela = document.querySelector('.yakinda'),
-		civi = document.getElementById('civi');
-
-	civi.addEventListener('click', () => {
-		tabela.classList.toggle('dustu');
-	});
-
-	// tabela düşer
-
-	$(".pageloader").show().fadeOut(2600);
 
 	// Burger
-	var navTrigger = document.getElementsByClassName('burger')[0],
-		overlay = document.getElementsByClassName('overlay')[0],
+	let navTrigger = document.getElementsByClassName('burger')[0],
 		body = document.getElementsByTagName('body')[0];
-
-	navTrigger.addEventListener('click', toggleNavigation);
-	overlay.addEventListener('click', OffNavigation);
 
 	function toggleNavigation(e) {
 		body.classList.toggle('nav-open');
 
-		$('.burger').toggleClass('open');
-		$('.x, .y, .z').toggleClass('collapse');
+		let burger = document.querySelector('.burger');
+		let xyz = document.querySelectorAll('div.x, div.y, div.z');
+		let x = document.querySelector('.x');
+		let y = document.querySelector('.y');
+		let z = document.querySelector('.z');
+
+		burger.classList.toggle('open');
+
+		xyz.classList.toggle('collapse');
 		setTimeout(function () {
-			$('.y').toggle();
-			$('.x').toggleClass('rotate30');
-			$('.z').toggleClass('rotate150');
+
+			if (y.style.display == 'none') {
+				y.style.display = 'block';
+			} else {
+				y.style.display = 'none';
+			}
+
+			x.classList.toggle('rotate30');
+			z.classList.toggle('rotate150');
 		}, 70);
 		setTimeout(function () {
-			$('.x').toggleClass('rotate45');
-			$('.z').toggleClass('rotate135');
+			x.classList.toggle('rotate45');
+			z.classList.toggle('rotate135');
 		}, 120);
-
-
-		// Mysidemenu
-		$('.sidemenu').toggleClass('opened');
-		// Mysidemenu
 	}
 
-	function OffNavigation() {
-		body.classList.toggle('nav-open');
-		//main.classList.toggle('boxShadow');
-		$('.burger').toggleClass('open');
-		$('.x, .y, .z').toggleClass('collapse');
-		setTimeout(function () {
-			$('.y').toggle();
-			$('.x').toggleClass('rotate30');
-			$('.z').toggleClass('rotate150');
-		}, 70);
-		setTimeout(function () {
-			$('.x').toggleClass('rotate45');
-			$('.z').toggleClass('rotate135');
-		}, 120);
-
-		// Mysidemenu
-		$('.sidemenu').toggleClass('opened');
-		// Mysidemenu
-	}
+	navTrigger.addEventListener('click', toggleNavigation);
 
 	// Bu Yazı Kaç Dakikada Okunur?
-	var readingTimeElement = document.getElementById('reading-time');
+	let readingTimeElement = document.getElementById('reading-time');
 	if (readingTimeElement) {
-		var txt = $(".post-full-content")[0].textContent,
+		let txt = document.querySelector(".post-full-content")[0].textContent,
 			wordCount = txt.replace(/[^\w ]/g, "").split(/\s+/).length;
-		var readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
-		var readingTimeAsString = readingTimeInMinutes + " dakika";
+		let readingTimeInMinutes = Math.floor(wordCount / 228) + 1;
+		let readingTimeAsString = readingTimeInMinutes + " dakika";
 
-		$(readingTimeElement).html(readingTimeAsString);
+		readingTimeElement.innerHTML = readingTimeAsString;
 	}
 	// Bu Yazı Kaç Dakikada Okunur?
 
-
-	const items = document.querySelectorAll('.slider-item');
-	if (items) {
-		const itemCount = items.length;
-		const nextItem = document.querySelector('.next');
-		const previousItem = document.querySelector('.previous');
-		let count = 0;
-
-		function showNextItem() {
-			items[count].classList.remove('active');
-
-			if (count < itemCount - 1) {
-				count++;
-			} else {
-				count = 0;
-			}
-
-			items[count].classList.add('active');
-			console.log(count);
-		}
-
-		function showPreviousItem() {
-			items[count].classList.remove('active');
-
-			if (count > 0) {
-				count--;
-			} else {
-				count = itemCount - 1;
-			}
-
-			items[count].classList.add('active');
-			// Check if working...
-			console.log(count);
-		}
-
-		function keyPress(e) {
-			e = e || window.event;
-
-			if (e.keyCode == '37') {
-				showPreviousItem();
-			} else if (e.keyCode == '39') {
-				showNextItem();
-			}
-		}
-
-		nextItem.addEventListener('click', showNextItem);
-		previousItem.addEventListener('click', showPreviousItem);
-		document.addEventListener('keydown', keyPress);
-	}
 
 	// Single Post Customize Elements
-	var fontSizeToggle = document.getElementById('normal');
-	var commentsToggle = document.querySelector('.toggleCommentform');
+	let commentsToggle = document.querySelector('.toggleCommentform');
 	if (commentsToggle) {
-		$(".toggleCommentform").click(function () {
-			$(".single-comments-form").toggle();
+		let singleCommentsForm = document.querySelector('.single-comments-form');
+		let singleCommentsContent = document.querySelector('.single-comments-content');
+		let toggleComments = document.querySelector('.toggleComments');
+
+		commentsToggle.on('click', function () {
+			if (singleCommentsForm.style.display == 'none') {
+				singleCommentsForm.style.display = 'block';
+			} else {
+				singleCommentsForm.style.display = 'none';
+			}
 		});
 
-		$(".toggleComments").click(function () {
-			$(".single-comments-content").toggle();
-		});
-	}
-
-	if (fontSizeToggle) {
-		$("#normal").on("click", function () {
-			$(".single-content").removeClass("up down").addClass("normal");
-		});
-
-		$("#up").on("click", function () {
-			$(".single-content").removeClass("normal down").addClass("up");
-		});
-
-		$("#down").on("click", function () {
-			$(".single-content").removeClass("normal up").addClass("down");
-		});
-	}
-
-
-
-	// Plugins    
-
-
-	/* Toggle Video Modal
-	-----------------------------------------*/
-	function toggle_video_modal() {
-
-		// Click on video thumbnail or link
-		$(".js-trigger-video-modal").on("click", function (e) {
-
-			// prevent default behavior for a-tags, button tags, etc. 
-			e.preventDefault();
-
-			// Grab the video ID from the element clicked
-			var id = $(this).attr('data-youtube-id');
-
-			// Autoplay when the modal appears
-			// Note: this is intetnionally disabled on most mobile devices
-			// If critical on mobile, then some alternate method is needed
-			var autoplay = '?autoplay=1';
-
-			// Don't show the 'Related Videos' view when the video ends
-			var related_no = '&rel=0';
-
-			// String the ID and param variables together
-			var src = '//www.youtube.com/embed/' + id + autoplay + related_no;
-
-			// Pass the YouTube video ID into the iframe template...
-			// Set the source on the iframe to match the video ID
-			$("#youtube").attr('src', src);
-
-			// Add class to the body to visually reveal the modal
-			$("body").addClass("show-video-modal noscroll");
-
-		});
-
-		// Close and Reset the Video Modal
-		function close_video_modal() {
-
-			event.preventDefault();
-
-			// re-hide the video modal
-			$("body").removeClass("show-video-modal noscroll");
-
-			// reset the source attribute for the iframe template, kills the video
-			$("#youtube").attr('src', '');
-
-		}
-		// if the 'close' button/element, or the overlay are clicked 
-		$('body').on('click', '.close-video-modal, .video-modal .overlay', function (event) {
-
-			// call the close and reset function
-			close_video_modal();
-
-		});
-		// if the ESC key is tapped
-		$('body').keyup(function (e) {
-			// ESC key maps to keycode `27`
-			if (e.keyCode == 27) {
-
-				// call the close and reset function
-				close_video_modal();
-
+		toggleComments.on('click', function () {
+			if (singleCommentsContent.style.display == 'none') {
+				singleCommentsContent.style.display = 'block';
+			} else {
+				singleCommentsContent.style.display = 'none';
 			}
 		});
 	}
-	if ($('.tilt-poster')) {
 
-		/* Tilt oldum 
-		-----------------------------------------*/
-		$('.tilt-poster').tilt({
-			scale: 1.05,
-			perspective: 500
+	let fontSizeToggle = document.getElementById('normal');
+	if (fontSizeToggle) {
+
+		let fontSizeToggleUP = document.getElementById('up');
+		let fontSizeToggleDOWN = document.getElementById('down');
+		let singleContent = document.querySelector('.single-content');
+
+		fontSizeToggle.on("click", function () {
+			singleContent.classList.remove("up, down");
+			singleContent.classList.add("normal");
 		});
 
-		toggle_video_modal();
+		fontSizeToggleUP.on("click", function () {
+			singleContent.classList.remove("up, down");
+			singleContent.classList.add("up");
+		});
+
+		fontSizeToggleDOWN.on("click", function () {
+			singleContent.classList.remove("normal, up");
+			singleContent.classList.add("down");
+		});
 	}
 
-});
+
+})();

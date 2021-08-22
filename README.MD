@@ -1,4 +1,4 @@
-## hi, this is hakki html5 boilerplate. 
+## hi, this is hakki2021 html5 template. 
 
 
 - Visual Studio Code

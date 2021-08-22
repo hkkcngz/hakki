@@ -97,18 +97,35 @@ if (Stories) {
     stories: [
       Zuck.buildTimelineItem(
         "hakki",
-        "http://127.0.0.1:5501/images/me.jpg",
-        "Hakkı",
+        "assets/js/plugins/zuckjs/me.jpg",
+        "Hakkı Cengiz",
         "https://hakki.app",
         timestamp(),
         [
-          ["hakki-1", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/1.jpg", '', false, false, timestamp()],
-          ["hakki-2", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/2.jpg", '', false, false, timestamp()],
-          ["hakki-3", "photo", 3, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/3.png", 'https://ramon.codes', 'Visit my Portfolio', false, timestamp()],
-          ["hakki-4", "video", 0, "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.mp4", "https://raw.githubusercontent.com/ramon82/assets/master/zuck.js/stories/4.jpg", '', false, false, timestamp()],
+          ["hakki-1", "photo", 3, "assets/js/plugins/zuckjs/test/1.jpg", "assets/js/plugins/zuckjs/test/1.jpg", '', false, false, timestamp()],
+          ["hakki-2", "video", 0, "assets/js/plugins/zuckjs/test/2.mp4", "assets/js/plugins/zuckjs/test/2.mp4", '', false, false, timestamp()],
+          ["hakki-3", "photo", 3, "assets/js/plugins/zuckjs/test/3.png", "assets/js/plugins/zuckjs/test/3.png", 'https://hakkicengiz.com', 'Portfolyama Gözat', false, timestamp()],
+          ["hakki-4", "video", 0, "assets/js/plugins/zuckjs/test/4.mp4", "assets/js/plugins/zuckjs/test/4.mp4", '', false, false, timestamp()],
         ]
       )
-    ]
+    ],
+    language: { // if you need to translate :)
+      unmute: 'Sessize almak için dokun',
+      keyboardTip: 'Sonrakini görmek için boşluğa basın',
+      visitLink: 'Linki ziyaret et',
+      time: {
+        ago:'önce', 
+        hour:'saat', 
+        hours:'saat', 
+        minute:'dakika', 
+        minutes:'dakika', 
+        fromnow: 'şimdi', 
+        seconds:'saniye', 
+        yesterday: 'dün', 
+        tomorrow: 'yarın', 
+        days:'gün'
+      }
+    }
   });
 
 }

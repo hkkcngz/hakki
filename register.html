@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Hakki.App — Boilerplate</title>
+  <meta name="title" content="Hakkı Cengiz Full Stack Web Developer">
+  <meta name="description" content="Blog Yazıları">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hakki.app/">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://hakki.app/assets/.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hakki.app/">
+  <meta property="twitter:title" content="">
+  <meta property="twitter:description" content="">
+  <meta property="twitter:image" content="https://hakki.app/assets/.png">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <link rel="preload" href="assets/css/fonts.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="slim-scroll">
+
+  <nav class="menu" tabindex="0">
+    <div class="burger">
+      <div class="x"></div>
+      <div class="y"></div>
+      <div class="z"></div>
+    </div>
+    <div class="smartphone-menu-trigger"></div>
+    <header class="avatar">
+      <!-- <img src="me.jpg" /> -->
+      <div id="stories" class="storiesWrapper"></div>
+    </header>
+    <ul>
+      <li tabindex="0" class="icon-dashboard"><span>Akış</span></li>
+      <li tabindex="0" class="icon-customers"><span>Hakkımda</span></li>
+      <li tabindex="0" class="icon-users"><span>Gruplar</span></li>
+      <li tabindex="0" class="icon-settings"><span>Ayarlar</span></li>
+      <li tabindex="0" class="icon-tools"><span>Araçlar</span></li>
+      <li tabindex="0" class="icon-search"><span>Arama</span></li>
+      <li tabindex="0" class="icon-music"><span>Müzik</span></li>
+      <li tabindex="0" class="icon-book"><span>Kitap</span></li>
+      <li tabindex="0" class="icon-dictionary"><span>Sözlük</span></li>
+      <li tabindex="0" class="icon-archer"><span>Oyunlar</span></li>
+      <li tabindex="0" class="icon-bookmark"><span>Yer İmlerim</span></li>
+      <li tabindex="0" class="icon-heart"><span>Beğendiklerim</span></li>
+      <li tabindex="0" class="icon-code"><span>Yazılım</span></li>
+      <li tabindex="0" class="icon-sitemap"><span>Site Haritası</span></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <div class="boxeed">
+      <div class="main-page">
+        <div class="main-page-content">
+          <!-- Page Content -->
+
+          <section class="chat-wrapper">
+            <div class="form signup">
+              <button id="push-subscription-button">Bildirimlere İzin Ver !</button>
+              <button id="send-push-button">Bir Bildirim Gönder</button>
+              <br>
+              <header>Gerçek Zamanlı Sohbet Uygulaması</header>
+              <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <div class="error-text"></div>
+                <div class="name-details">
+                  <div class="field input">
+                    <label>Adınız</label>
+                    <input type="text" name="fname" placeholder="Adınız" required="">
+                  </div>
+                  <div class="field input">
+                    <label>Soyadınız</label>
+                    <input type="text" name="lname" placeholder="Soyadınız" required="">
+                  </div>
+                </div>
+                <div class="field input">
+                  <label>E-posta Adresiniz</label>
+                  <input type="text" name="email" placeholder="ornek@mail.com" required="">
+                </div>
+                <div class="field input">
+                  <label>Şifreniz</label>
+                  <input type="password" name="password" placeholder="******" required="">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div class="field image">
+                  <label>Profil Fotoğrafınız</label>
+                  <input type="file" name="image" accept="image/x-png,image/gif,image/jpeg,image/jpg" required="">
+                </div>
+                <div class="field button">
+                  <input type="submit" name="submit" value="Sohbete Başla">
+                </div>
+              </form>
+              <div class="link">Zaten kayıtlı mısınız? <a href="login.php">Şimdi Giriş Yap</a></div>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="main-page-navigation">
+
+          <div class="nav-sticky">
+
+            <div class="side-box">
+              <h3>Populer Yazılar</h3>
+            </div>
+
+            <div class="side-box">
+              <h3>Son Yorumlar</h3>
+            </div>
+
+            <div class="side-box">
+
+              <h3 class="title">Topluluklar</h3>
+              <p>Size özel katılabileceğiniz topluluklar.</p>
+
+              <div class="circle_list">
+                <a href="#" title="Çay Arası" rel="noopener noreferrer">
+                  <img src="images/projects/cay-arasi.png" alt="Çay Arası">
+                </a>
+                <a href="#" title="Kodmob" rel="noopener noreferrer">
+                  <img src="images/projects/kodmob-logo.png" alt="Kodmob">
+                </a>
+              </div>
+
+            </div>
+
+            <div class="side-box">
+              <footer class="copyright">
+                <p>© 2009 - 2021 Hakkı Cengiz.
+                  One Theme To Rule Them All.
+                  Tüm hakları saklıdır.
+              </footer>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="work-desk boxed">
+      <div class="boy">
+        <div class="head">
+          <div class="eyes"></div>
+          <div class="headphones"></div>
+        </div>
+        <div class="body"></div>
+      </div>
+      <div class="laptop"></div>
+
+      <div class="table"></div>
+      <div class="mouse"></div>
+      <div class="notes"></div>
+      <div class="lamp">
+        <div class="top"></div>
+      </div>
+
+    </div>
+
+    <div class="nothing-else-matter">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" style="display: none;">
+        <!-- Nasıl kullanırız?
+          <svg class="icon">
+              <use xlink:href="#icon-logo" />
+          </svg>
+        -->
+        <!-- Music.Js -->
+        <symbol id="icon-list-ul" viewBox="0 0 512 512">
+          <path
+            d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z" />
+        </symbol>
+        <symbol id="icon-backward" viewBox="0 0 512 512">
+          <path
+            d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z" />
+        </symbol>
+        <symbol id="icon-play" viewBox="0 0 448 512">
+          <path
+            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z" />
+        </symbol>
+        <symbol id="icon-pause" viewBox="0 0 448 512">
+          <path
+            d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z" />
+        </symbol>
+        <symbol id="icon-forward" viewBox="0 0 512 512">
+          <path
+            d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z" />
+        </symbol>
+        <symbol id="icon-volume-up" viewBox="0 0 576 512">
+          <path
+            d="M215.03 71.05L126.06 160H24c-13.26 0-24 10.74-24 24v144c0 13.25 10.74 24 24 24h102.06l88.97 88.95c15.03 15.03 40.97 4.47 40.97-16.97V88.02c0-21.46-25.96-31.98-40.97-16.97zm233.32-51.08c-11.17-7.33-26.18-4.24-33.51 6.95-7.34 11.17-4.22 26.18 6.95 33.51 66.27 43.49 105.82 116.6 105.82 195.58 0 78.98-39.55 152.09-105.82 195.58-11.17 7.32-14.29 22.34-6.95 33.5 7.04 10.71 21.93 14.56 33.51 6.95C528.27 439.58 576 351.33 576 256S528.27 72.43 448.35 19.97zM480 256c0-63.53-32.06-121.94-85.77-156.24-11.19-7.14-26.03-3.82-33.12 7.46s-3.78 26.21 7.41 33.36C408.27 165.97 432 209.11 432 256s-23.73 90.03-63.48 115.42c-11.19 7.14-14.5 22.07-7.41 33.36 6.51 10.36 21.12 15.14 33.12 7.46C447.94 377.94 480 319.54 480 256zm-141.77-76.87c-11.58-6.33-26.19-2.16-32.61 9.45-6.39 11.61-2.16 26.2 9.45 32.61C327.98 228.28 336 241.63 336 256c0 14.38-8.02 27.72-20.92 34.81-11.61 6.41-15.84 21-9.45 32.61 6.43 11.66 21.05 15.8 32.61 9.45 28.23-15.55 45.77-45 45.77-76.88s-17.54-61.32-45.78-76.86z" />
+        </symbol>
+        <!-- Music.Js -->
+
+        <!-- Literature Icon -->
+        <symbol id="icon-literature" viewBox="0 0 24 24" enable-background="new 0 0 24 24" stroke-linejoin="round"
+          stroke-linecap="round" height="21" stroke-width="2" stroke="currentColor" fill="currentColor">
+          <line x1="17" y1="10" x2="3" y2="10"></line>
+          <line x1="21" y1="6" x2="3" y2="6"></line>
+          <line x1="21" y1="14" x2="3" y2="14"></line>
+          <line x1="17" y1="18" x2="3" y2="18"></line>
+        </symbol>
+
+      </svg>
+
+      <div class="overlay"></div>
+
+      <!-- Cookie Alert -->
+      <div class="cookie-alert">
+        <img src="images/theme/cookie.png" alt="">
+        <div class="content">
+          <header>Çerezler İzni</header>
+          <p>Sitemizde en iyi deneyimi yaşamanızı sağlamak için çerezleri kullanırız.</p>
+          <div class="buttons">
+            <button class="item">Anlıyorum</button>
+            <a href="#" class="item" onclick="closeCookiesBox()">Kapat</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/plugins/zuckjs/zuck.min.js"></script>
+  <script src="assets/js/plugins/zuckjs/zuck.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- register -->
+  <script src="assets/js/chat/pass-show-hide.js"></script>
+  <script src="assets/js/chat/signup.js"></script>
+
+  <script src="assets/js/chat/app.js"></script>
+  <!-- chat page-->
+
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 // BASE
 @import 'base/reset';
-@import 'base/fonts';
+// @import 'base/fonts';
 @import 'base/mixins';
 @import 'base/grid';
 
@@ -10,7 +10,7 @@
 @import 'base/themes';
 @import 'base/screen';
 @import 'base/typography';
-
+@import 'base/skeleton';
 
 // My Tools
 @import 'mytools/helpers';
@@ -18,19 +18,19 @@
 @import 'mytools/tabs';         // tabs
 @import 'mytools/foreverlist';  // dropdown ul li
 @import 'mytools/cookie';
-
+@import 'mytools/custom-title';
+@import 'mytools/bgselector';
 
 // Components
 @import 'comps/header';
-@import 'comps/sidemenu';
 @import 'comps/work-desk';
 @import 'comps/documentation';
-@import 'comps/yakinda';
-@import 'comps/kapim';
 @import 'comps/tagcloud';
-@import 'comps/postcard';
-@import 'comps/categories';
 @import 'comps/comments';
+@import 'comps/posts';
+@import 'comps/dictionary';
+@import 'comps/faq';
+@import 'comps/404';
 
 // Plugins
 @import 'plugins/translate';
@@ -45,6 +45,8 @@
 @import 'pages/single-post-info';
 @import 'pages/card';
 @import 'pages/posts';
+@import 'pages/chat';
+@import 'pages/search';
 
 // Custom
 @import 'custom';

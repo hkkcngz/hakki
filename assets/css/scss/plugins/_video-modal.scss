@@ -1,14 +1,15 @@
-.list{
+.list {
     display: block;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    padding: 1rem;
+    padding: 0;
     background-color: white;
     list-style-type: none;
     counter-reset: li;
 }
+
 .list__vid {
     position: relative;
     display: inline-block;
@@ -18,6 +19,7 @@
     min-width: 100%;
     min-height: 200px;
     padding: .5rem;
+
     &:before {
         content: counter(li);
         counter-increment: li;
@@ -31,9 +33,10 @@
         font-size: 1.5em;
         color: white;
         border-radius: 50%;
-        background-color: var(--videoColor, #e62117);
+        background-color: #52b586;
         pointer-events: none;
     }
+
     a {
         display: block;
         height: 100%;
@@ -48,39 +51,46 @@
         text-decoration: none;
 
         color: var(--videoColor, #e62117);
+
         &:after {
             content: '';
             display: none;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 35%;
-            right: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-image: url("data:image/svg+xml,%3Csvg height='3em' width='3em' viewBox='0 -77 512.00213 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m501.453125 56.09375c-5.902344-21.933594-23.195313-39.222656-45.125-45.128906-40.066406-10.964844-200.332031-10.964844-200.332031-10.964844s-160.261719 0-200.328125 10.546875c-21.507813 5.902344-39.222657 23.617187-45.125 45.546875-10.542969 40.0625-10.542969 123.148438-10.542969 123.148438s0 83.503906 10.542969 123.148437c5.90625 21.929687 23.195312 39.222656 45.128906 45.128906 40.484375 10.964844 200.328125 10.964844 200.328125 10.964844s160.261719 0 200.328125-10.546875c21.933594-5.902344 39.222656-23.195312 45.128906-45.125 10.542969-40.066406 10.542969-123.148438 10.542969-123.148438s.421875-83.507812-10.546875-123.570312zm0 0' fill='%23f00'/%3E%3Cpath d='m204.96875 256 133.269531-76.757812-133.269531-76.757813zm0 0' fill='%23fff'/%3E%3C/svg%3E");
-            width: 25%;
+            width: 60px;
+            height: 60px;
             background-position: center;
             background-repeat: no-repeat;
         }
+
         &:hover,
         &:focus {
             outline: 0;
-            background-color: var(--videoColor, #e62117);
+            background-color: #52b586;
             color: white;
             text-decoration: none;
-            border-color: var(--videoColor, #e62117);
+            border-color: #52b586;
             z-index: 10;
+            h3 {
+                color: white;
+            }
         }
+
         &:hover:after,
         &:focus:after {
             display: block;
         }
     }
+
     h3 {
         margin: 0;
         margin-top: 56.25%;
         padding: 1rem;
         color: #222;
-        font-size: 1.1rem;
+        font-size: 1em;
         font-weight: normal;
     }
 }
@@ -101,6 +111,7 @@
     backface-visibility: hidden;
     transform: translateX(100%);
     transition: transform .2s ease-in;
+
     &.active {
         z-index: 30;
         opacity: 1;
@@ -164,23 +175,6 @@
         min-width: 50%;
     }
 }
-
-@media (min-width: 990px) {
-    .list__vid {
-        width: 33%;
-        min-width: 33%;
-    }
-}
-
-@media (min-width: 1401px) {
-    .list__vid {
-        width: 33.33333%;
-        min-width: 25%;
-    }
-}
-
-
-
 
 
 /* Video Modal

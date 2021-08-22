@@ -1,0 +1,49 @@
+.design {
+	background: #f6f6f6;
+	width: 100%;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 5px 20px rgba(0,0,0,0.1);
+	padding: 20px;
+	overflow: visible !important;
+	.alphabet {
+		text-align: right;
+		font-weight: 700;
+		font-size: 34px;
+		text-transform: capitalize;
+		letter-spacing: 2px;
+	}
+	.design-alt-wrapper {
+		padding: 0 35px;
+		margin-top: 6em;
+	}
+	.word {
+		font: 700 45px/.9 'Libre Baskerville', serif;
+		word-break: break-all;
+	}
+	.type {
+		font: italic 500 28px 'Libre Baskerville', serif;
+		margin: 10px 0;
+	}
+	.context {
+		margin: 25px 0;
+		width: 90%;
+	}
+	.image {
+		font-style: italic;
+		text-align: center;
+		margin: 3em 0;
+		width: 100%;
+		overflow: hidden;
+		#imager {
+			width: auto;
+			height: 300px;
+			border: 1px solid;
+			margin: auto;
+			position: relative;
+		}
+		p {
+			display: block;
+			margin-top: 8px;
+		}
+	}
+}
